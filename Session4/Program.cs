@@ -29,6 +29,7 @@ namespace Session4
             Console.WriteLine(sb);
             Console.WriteLine(sb.GetHashCode());
             #endregion
+
             #region One Dimension Array
             int[] numbers;
             //referring to default value of reference type null
@@ -44,6 +45,29 @@ namespace Session4
             for (int i = 0; i < numbers2.Length; i++)
             {
                 Console.WriteLine(numbers2[i]);
+            }
+            #endregion
+
+            #region Rectangular 2D Array
+            int[,] marks = new int[3, 5] { { 43, 32, 21, 12, 32 }, { 43, 32, 21, 12, 32 }, { 43, 32, 21, 12, 32 } };
+            // new-> allocate required bytes at heap (60 bytes)
+            Console.WriteLine($"Size of array = {marks.Length}, Dimensions = {marks.Rank}");
+            int[,] marks2 = new int[3, 5];
+            for (int i =0; i<marks2.GetLength(0); i++)
+            {
+                Console.WriteLine($"Enter the marks of student {i+1}: ");
+                for(int j = 0; j < marks2.GetLength(1); j++)
+                {
+                    marks2[i,j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            for (int i = 0;i<marks2.GetLength(0); i++)
+            {
+                Console.WriteLine($"Marks of student {i + 1} is: ");
+                for (int j = 0;j < marks2.GetLength(1); j++)
+                {
+                    Console.WriteLine(marks2[i,j]); // print each value in the 2D array
+                }
             }
             #endregion
         }
