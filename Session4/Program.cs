@@ -29,6 +29,23 @@ namespace Session4
             Console.WriteLine(sb);
             Console.WriteLine(sb.GetHashCode());
             #endregion
+            #region One Dimension Array
+            int[] numbers;
+            //referring to default value of reference type null
+            //declare for reference from type array of int
+            // clr will allocate 4 bytes at stack for the reference because its integer
+            // clr will allocate 0 bytes at heap
+            numbers = new int[3]; //allocate 12 bytes at heap
+            Console.WriteLine(numbers[0]);
+            numbers[0] = 1;
+            numbers[1] = 2;
+            numbers[2] = 3;
+            int[] numbers2 = new int[3] { 1, 2, 3 } ;
+            for (int i = 0; i < numbers2.Length; i++)
+            {
+                Console.WriteLine(numbers2[i]);
+            }
+            #endregion
         }
     }
 }
