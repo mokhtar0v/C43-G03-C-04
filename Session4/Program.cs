@@ -70,6 +70,20 @@ namespace Session4
                 }
             }
             #endregion
+
+            #region Judjed Array
+            int[][] judje = new int[3][];
+            judje[0] = new int[] { 1, 2, 3 };
+            judje[1] = new int[] { 4, 5 };
+            judje[2] = new int[] { 5 };
+            for (int i = 0; i < judje.Length; i++)
+            {
+                for (int j = 0; j < judje[i].Length; ++j)
+                {
+                    Console.WriteLine(judje[i][j]);
+                }
+            }
+            #endregion
         }
     }
 }
