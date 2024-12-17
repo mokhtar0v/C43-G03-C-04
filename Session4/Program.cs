@@ -84,6 +84,16 @@ namespace Session4
                 }
             }
             #endregion
+
+            #region Array Methods
+            int[] arr = { 5, 2, 1, 9, 7, 4 };
+            int[] arr01 = { 1, 2, 3 };
+            int[] arr02 = new int[5];
+
+            //Class Member Methods
+            Array.Sort(arr); // Sorting the array in an ascending order
+            Array.Copy(arr01, arr02, 2);
+            #endregion
         }
     }
 }
