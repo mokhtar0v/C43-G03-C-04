@@ -11,6 +11,18 @@ namespace Session4
                 Console.WriteLine(s);
             }
         }
+        public static void swap(int x, int y)
+        {
+            int temp = x;
+            x = y;
+            y = temp;
+        }
+        public static void swap2(ref int x, ref int y)
+        {
+            int temp = x;
+            x = y;
+            y = temp;
+        }
         static void Main(string[] args)
         {
             #region StringVsStringBuilder
@@ -105,6 +117,19 @@ namespace Session4
             #region Functions
             string s = Console.ReadLine();
             print(s, 11);
+            #endregion
+
+            #region Functions Valuetype
+            int x = 3, y = 5;
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            swap(x, y);
+            Console.WriteLine(x);
+            Console.WriteLine(y); // swap will not actually happen because of (passing by value)
+            swap2(ref x,ref y);
+            Console.WriteLine(x);
+            Console.WriteLine(y); // swap will happen because of (passing by reference)
+
             #endregion
         }
     }
