@@ -4,6 +4,13 @@ namespace Session4
 {
     internal class Program
     {
+        public static void print(string s, int count)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(s);
+            }
+        }
         static void Main(string[] args)
         {
             #region StringVsStringBuilder
@@ -93,6 +100,11 @@ namespace Session4
             //Class Member Methods
             Array.Sort(arr); // Sorting the array in an ascending order
             Array.Copy(arr01, arr02, 2);
+            #endregion
+
+            #region Functions
+            string s = Console.ReadLine();
+            print(s, 11);
             #endregion
         }
     }
