@@ -27,7 +27,19 @@ namespace Session4
         {
             sum = x + y;
             prod = x * y;
-        } 
+        }
+        public static int sumarray(params int[] arr)
+        {
+            int sum = 0;
+            if(arr != null)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    sum += arr[i];
+                }
+            }
+            return sum;
+        }
         static void Main(string[] args)
         {
             #region StringVsStringBuilder
@@ -142,6 +154,12 @@ namespace Session4
             sumprod(a, b, out sum, out p);
             Console.WriteLine($"Sum = {sum}");
             Console.WriteLine($"Prod = {p}");
+            #endregion
+
+            #region Params
+            int[] n = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int arrsum = sumarray(1, 2, 3, 4, 5, 6, 7, 8, 9);
+            Console.WriteLine(arrsum);
             #endregion
         }
     }
