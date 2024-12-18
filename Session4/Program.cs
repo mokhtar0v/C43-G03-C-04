@@ -23,6 +23,11 @@ namespace Session4
             x = y;
             y = temp;
         }
+        public static void sumprod(int x, int y, out int sum, out int prod)
+        {
+            sum = x + y;
+            prod = x * y;
+        } 
         static void Main(string[] args)
         {
             #region StringVsStringBuilder
@@ -130,6 +135,13 @@ namespace Session4
             Console.WriteLine(x);
             Console.WriteLine(y); // swap will happen because of (passing by reference)
 
+            #endregion
+
+            #region Passing by output
+            int a = 10, b = 5, sum, p;
+            sumprod(a, b, out sum, out p);
+            Console.WriteLine($"Sum = {sum}");
+            Console.WriteLine($"Prod = {p}");
             #endregion
         }
     }
